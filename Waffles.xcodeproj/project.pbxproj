@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B25840651735BF3300B07078 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25840641735BF3300B07078 /* UIKit.framework */; };
+		B25840671735BF3300B07078 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25840661735BF3300B07078 /* Foundation.framework */; };
+		B25840691735BF3300B07078 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25840681735BF3300B07078 /* CoreGraphics.framework */; };
+		B258406F1735BF3300B07078 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B258406D1735BF3300B07078 /* InfoPlist.strings */; };
+		B25840711735BF3300B07078 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B25840701735BF3300B07078 /* main.m */; };
+		B25840751735BF3300B07078 /* LGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B25840741735BF3300B07078 /* LGAppDelegate.m */; };
+		B25840771735BF3300B07078 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B25840761735BF3300B07078 /* Default.png */; };
+		B25840791735BF3300B07078 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B25840781735BF3300B07078 /* Default@2x.png */; };
+		B258407B1735BF3300B07078 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B258407A1735BF3300B07078 /* Default-568h@2x.png */; };
+		B258407E1735BF3300B07078 /* LGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B258407D1735BF3300B07078 /* LGViewController.m */; };
+		B25840811735BF3300B07078 /* LGViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B258407F1735BF3300B07078 /* LGViewController_iPhone.xib */; };
+		B25840841735BF3300B07078 /* LGViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B25840821735BF3300B07078 /* LGViewController_iPad.xib */; };
+		B258408C1735BF3300B07078 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B258408B1735BF3300B07078 /* SenTestingKit.framework */; };
+		B258408D1735BF3300B07078 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25840641735BF3300B07078 /* UIKit.framework */; };
+		B258408E1735BF3300B07078 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25840661735BF3300B07078 /* Foundation.framework */; };
+		B25840961735BF3300B07078 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B25840941735BF3300B07078 /* InfoPlist.strings */; };
+		B25840991735BF3300B07078 /* WafflesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B25840981735BF3300B07078 /* WafflesTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B258408F1735BF3300B07078 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B25840591735BF3300B07078 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B25840601735BF3300B07078;
+			remoteInfo = Waffles;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B25840611735BF3300B07078 /* Waffles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waffles.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B25840641735BF3300B07078 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B25840661735BF3300B07078 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B25840681735BF3300B07078 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B258406C1735BF3300B07078 /* Waffles-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Waffles-Info.plist"; sourceTree = "<group>"; };
+		B258406E1735BF3300B07078 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B25840701735BF3300B07078 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B25840721735BF3300B07078 /* Waffles-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Waffles-Prefix.pch"; sourceTree = "<group>"; };
+		B25840731735BF3300B07078 /* LGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGAppDelegate.h; sourceTree = "<group>"; };
+		B25840741735BF3300B07078 /* LGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGAppDelegate.m; sourceTree = "<group>"; };
+		B25840761735BF3300B07078 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B25840781735BF3300B07078 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		B258407A1735BF3300B07078 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B258407C1735BF3300B07078 /* LGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGViewController.h; sourceTree = "<group>"; };
+		B258407D1735BF3300B07078 /* LGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGViewController.m; sourceTree = "<group>"; };
+		B25840801735BF3300B07078 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LGViewController_iPhone.xib; sourceTree = "<group>"; };
+		B25840831735BF3300B07078 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LGViewController_iPad.xib; sourceTree = "<group>"; };
+		B258408A1735BF3300B07078 /* WafflesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WafflesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B258408B1735BF3300B07078 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		B25840931735BF3300B07078 /* WafflesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WafflesTests-Info.plist"; sourceTree = "<group>"; };
+		B25840951735BF3300B07078 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B25840971735BF3300B07078 /* WafflesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WafflesTests.h; sourceTree = "<group>"; };
+		B25840981735BF3300B07078 /* WafflesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WafflesTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B258405E1735BF3300B07078 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25840651735BF3300B07078 /* UIKit.framework in Frameworks */,
+				B25840671735BF3300B07078 /* Foundation.framework in Frameworks */,
+				B25840691735BF3300B07078 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B25840861735BF3300B07078 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B258408C1735BF3300B07078 /* SenTestingKit.framework in Frameworks */,
+				B258408D1735BF3300B07078 /* UIKit.framework in Frameworks */,
+				B258408E1735BF3300B07078 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B25840581735BF3300B07078 = {
+			isa = PBXGroup;
+			children = (
+				B258406A1735BF3300B07078 /* Waffles */,
+				B25840911735BF3300B07078 /* WafflesTests */,
+				B25840631735BF3300B07078 /* Frameworks */,
+				B25840621735BF3300B07078 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B25840621735BF3300B07078 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B25840611735BF3300B07078 /* Waffles.app */,
+				B258408A1735BF3300B07078 /* WafflesTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B25840631735BF3300B07078 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B25840641735BF3300B07078 /* UIKit.framework */,
+				B25840661735BF3300B07078 /* Foundation.framework */,
+				B25840681735BF3300B07078 /* CoreGraphics.framework */,
+				B258408B1735BF3300B07078 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B258406A1735BF3300B07078 /* Waffles */ = {
+			isa = PBXGroup;
+			children = (
+				B25840731735BF3300B07078 /* LGAppDelegate.h */,
+				B25840741735BF3300B07078 /* LGAppDelegate.m */,
+				B258407C1735BF3300B07078 /* LGViewController.h */,
+				B258407D1735BF3300B07078 /* LGViewController.m */,
+				B258407F1735BF3300B07078 /* LGViewController_iPhone.xib */,
+				B25840821735BF3300B07078 /* LGViewController_iPad.xib */,
+				B258406B1735BF3300B07078 /* Supporting Files */,
+			);
+			path = Waffles;
+			sourceTree = "<group>";
+		};
+		B258406B1735BF3300B07078 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B258406C1735BF3300B07078 /* Waffles-Info.plist */,
+				B258406D1735BF3300B07078 /* InfoPlist.strings */,
+				B25840701735BF3300B07078 /* main.m */,
+				B25840721735BF3300B07078 /* Waffles-Prefix.pch */,
+				B25840761735BF3300B07078 /* Default.png */,
+				B25840781735BF3300B07078 /* Default@2x.png */,
+				B258407A1735BF3300B07078 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B25840911735BF3300B07078 /* WafflesTests */ = {
+			isa = PBXGroup;
+			children = (
+				B25840971735BF3300B07078 /* WafflesTests.h */,
+				B25840981735BF3300B07078 /* WafflesTests.m */,
+				B25840921735BF3300B07078 /* Supporting Files */,
+			);
+			path = WafflesTests;
+			sourceTree = "<group>";
+		};
+		B25840921735BF3300B07078 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B25840931735BF3300B07078 /* WafflesTests-Info.plist */,
+				B25840941735BF3300B07078 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B25840601735BF3300B07078 /* Waffles */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B258409C1735BF3300B07078 /* Build configuration list for PBXNativeTarget "Waffles" */;
+			buildPhases = (
+				B258405D1735BF3300B07078 /* Sources */,
+				B258405E1735BF3300B07078 /* Frameworks */,
+				B258405F1735BF3300B07078 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Waffles;
+			productName = Waffles;
+			productReference = B25840611735BF3300B07078 /* Waffles.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B25840891735BF3300B07078 /* WafflesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B258409F1735BF3300B07078 /* Build configuration list for PBXNativeTarget "WafflesTests" */;
+			buildPhases = (
+				B25840851735BF3300B07078 /* Sources */,
+				B25840861735BF3300B07078 /* Frameworks */,
+				B25840871735BF3300B07078 /* Resources */,
+				B25840881735BF3300B07078 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B25840901735BF3300B07078 /* PBXTargetDependency */,
+			);
+			name = WafflesTests;
+			productName = WafflesTests;
+			productReference = B258408A1735BF3300B07078 /* WafflesTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B25840591735BF3300B07078 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LG;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Shoumik Palkar";
+			};
+			buildConfigurationList = B258405C1735BF3300B07078 /* Build configuration list for PBXProject "Waffles" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B25840581735BF3300B07078;
+			productRefGroup = B25840621735BF3300B07078 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B25840601735BF3300B07078 /* Waffles */,
+				B25840891735BF3300B07078 /* WafflesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B258405F1735BF3300B07078 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B258406F1735BF3300B07078 /* InfoPlist.strings in Resources */,
+				B25840771735BF3300B07078 /* Default.png in Resources */,
+				B25840791735BF3300B07078 /* Default@2x.png in Resources */,
+				B258407B1735BF3300B07078 /* Default-568h@2x.png in Resources */,
+				B25840811735BF3300B07078 /* LGViewController_iPhone.xib in Resources */,
+				B25840841735BF3300B07078 /* LGViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B25840871735BF3300B07078 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25840961735BF3300B07078 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B25840881735BF3300B07078 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B258405D1735BF3300B07078 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25840711735BF3300B07078 /* main.m in Sources */,
+				B25840751735BF3300B07078 /* LGAppDelegate.m in Sources */,
+				B258407E1735BF3300B07078 /* LGViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B25840851735BF3300B07078 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25840991735BF3300B07078 /* WafflesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B25840901735BF3300B07078 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B25840601735BF3300B07078 /* Waffles */;
+			targetProxy = B258408F1735BF3300B07078 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B258406D1735BF3300B07078 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B258406E1735BF3300B07078 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B258407F1735BF3300B07078 /* LGViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B25840801735BF3300B07078 /* en */,
+			);
+			name = LGViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		B25840821735BF3300B07078 /* LGViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B25840831735BF3300B07078 /* en */,
+			);
+			name = LGViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		B25840941735BF3300B07078 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B25840951735BF3300B07078 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B258409A1735BF3300B07078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B258409B1735BF3300B07078 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B258409D1735BF3300B07078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Waffles/Waffles-Prefix.pch";
+				INFOPLIST_FILE = "Waffles/Waffles-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B258409E1735BF3300B07078 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Waffles/Waffles-Prefix.pch";
+				INFOPLIST_FILE = "Waffles/Waffles-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B25840A01735BF3300B07078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Waffles.app/Waffles";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Waffles/Waffles-Prefix.pch";
+				INFOPLIST_FILE = "WafflesTests/WafflesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B25840A11735BF3300B07078 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Waffles.app/Waffles";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Waffles/Waffles-Prefix.pch";
+				INFOPLIST_FILE = "WafflesTests/WafflesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B258405C1735BF3300B07078 /* Build configuration list for PBXProject "Waffles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B258409A1735BF3300B07078 /* Debug */,
+				B258409B1735BF3300B07078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B258409C1735BF3300B07078 /* Build configuration list for PBXNativeTarget "Waffles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B258409D1735BF3300B07078 /* Debug */,
+				B258409E1735BF3300B07078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B258409F1735BF3300B07078 /* Build configuration list for PBXNativeTarget "WafflesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B25840A01735BF3300B07078 /* Debug */,
+				B25840A11735BF3300B07078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B25840591735BF3300B07078 /* Project object */;
+}
