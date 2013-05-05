@@ -7,6 +7,7 @@
 //
 
 #import "LGViewController.h"
+#import "LGXMLParser.h"
 
 @interface LGViewController ()
 
@@ -18,7 +19,37 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self getQueryResults:@"10221"];
 }
+
+
+
+-(void)getQueryResults:(NSString *)query {
+    
+    NSString *queryString = [NSString stringWithFormat:@"http://www.brickset.com/webservices/brickset.asmx/search?apiKey=&userHash=&query=%@&theme=&subtheme=&setNumber=&year=&Owned=&Wanted=", query];
+    NSString *urlString = [queryString stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+    
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:urlString]];
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
+    dispatch_async(queue, ^{
+                
+        NSURLResponse *response = nil;
+        NSError *error = nil;
+        
+        NSData *receivedData = [NSURLConnection sendSynchronousRequest:request
+                                                     returningResponse:&response
+                                                                 error:&error];
+        
+        LGXMLParser *parser = [[LGXMLParser alloc] initWithData:receivedData];
+    });
+}
+
+-(void)processQueryResults {
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {

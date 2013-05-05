@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LGViewController : UIViewController
+@interface LGViewController : UIViewController <NSURLConnectionDelegate>
+
+-(void)getQueryResults:(NSString *)query;
+
+@property(nonatomic, retain) IBOutlet UIImageView *imageView;
 
 @end

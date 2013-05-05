@@ -24,6 +24,8 @@
 		B258408E1735BF3300B07078 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25840661735BF3300B07078 /* Foundation.framework */; };
 		B25840961735BF3300B07078 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B25840941735BF3300B07078 /* InfoPlist.strings */; };
 		B25840991735BF3300B07078 /* WafflesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B25840981735BF3300B07078 /* WafflesTests.m */; };
+		B25840A41735DC4B00B07078 /* LGLegoSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B25840A31735DC4B00B07078 /* LGLegoSet.m */; };
+		B25840A71735DD2E00B07078 /* LGXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B25840A61735DD2E00B07078 /* LGXMLParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,10 @@
 		B25840951735BF3300B07078 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B25840971735BF3300B07078 /* WafflesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WafflesTests.h; sourceTree = "<group>"; };
 		B25840981735BF3300B07078 /* WafflesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WafflesTests.m; sourceTree = "<group>"; };
+		B25840A21735DC4B00B07078 /* LGLegoSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGLegoSet.h; sourceTree = "<group>"; };
+		B25840A31735DC4B00B07078 /* LGLegoSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGLegoSet.m; sourceTree = "<group>"; };
+		B25840A51735DD2E00B07078 /* LGXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGXMLParser.h; sourceTree = "<group>"; };
+		B25840A61735DD2E00B07078 /* LGXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGXMLParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,10 @@
 				B258407F1735BF3300B07078 /* LGViewController_iPhone.xib */,
 				B25840821735BF3300B07078 /* LGViewController_iPad.xib */,
 				B258406B1735BF3300B07078 /* Supporting Files */,
+				B25840A21735DC4B00B07078 /* LGLegoSet.h */,
+				B25840A31735DC4B00B07078 /* LGLegoSet.m */,
+				B25840A51735DD2E00B07078 /* LGXMLParser.h */,
+				B25840A61735DD2E00B07078 /* LGXMLParser.m */,
 			);
 			path = Waffles;
 			sourceTree = "<group>";
@@ -278,6 +288,8 @@
 				B25840711735BF3300B07078 /* main.m in Sources */,
 				B25840751735BF3300B07078 /* LGAppDelegate.m in Sources */,
 				B258407E1735BF3300B07078 /* LGViewController.m in Sources */,
+				B25840A41735DC4B00B07078 /* LGLegoSet.m in Sources */,
+				B25840A71735DD2E00B07078 /* LGXMLParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +480,7 @@
 				B258409E1735BF3300B07078 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B258409F1735BF3300B07078 /* Build configuration list for PBXNativeTarget "WafflesTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +489,7 @@
 				B25840A11735BF3300B07078 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
