@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
-@interface LGViewController : UIViewController <NSURLConnectionDelegate>
+@interface LGViewController : UIViewController <NSURLConnectionDelegate, UITextFieldDelegate>
 
 -(void)getQueryResults:(NSString *)query;
 
-@property(nonatomic, retain) IBOutlet UIImageView *imageView;
+@property(nonatomic, strong) IBOutlet UIView *searchFieldContainerView;
+@property(nonatomic, strong) IBOutlet UITextField *searchField;
 
 @end

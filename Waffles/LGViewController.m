@@ -9,6 +9,7 @@
 #import "LGViewController.h"
 #import "LGXMLParser.h"
 #import "LGLegoSet.h"
+#import "LGResultsViewController.h"
 
 @interface LGViewController ()
 -(void)processQueryResults:(NSArray *)results;
@@ -16,8 +17,7 @@
 
 @implementation LGViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
@@ -51,6 +51,9 @@
     for (LGLegoSet *set in results) {
         NSLog(@"%@", [set description]);
     }
+        
+    LGResultsViewController *resultsController = [[LGResultsViewController alloc] initWithNibName:@"LGResultsViewController" bundle:nil];
+    [self presentViewController:resultsController animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
