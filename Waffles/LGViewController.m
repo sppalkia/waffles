@@ -8,9 +8,10 @@
 
 #import "LGViewController.h"
 #import "LGXMLParser.h"
+#import "LGLegoSet.h"
 
 @interface LGViewController ()
-
+-(void)processQueryResults:(NSArray *)results;
 @end
 
 @implementation LGViewController
@@ -22,8 +23,6 @@
     
     [self getQueryResults:@"10221"];
 }
-
-
 
 -(void)getQueryResults:(NSString *)query {
     
@@ -42,14 +41,17 @@
                                                                  error:&error];
         
         LGXMLParser *parser = [[LGXMLParser alloc] initWithData:receivedData];
+        NSArray *finalResult = [parser parsedData];
+        
+        [self performSelectorOnMainThread:@selector(processQueryResults:) withObject:finalResult waitUntilDone:NO];
     });
 }
 
--(void)processQueryResults {
-    
+-(void)processQueryResults:(NSArray *)results {
+    for (LGLegoSet *set in results) {
+        NSLog(@"%@", [set description]);
+    }
 }
-
-
 
 - (void)didReceiveMemoryWarning
 {
