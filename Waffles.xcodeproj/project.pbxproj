@@ -14,6 +14,9 @@
 		B20A6ABF17375B530066BE64 /* LGEmblemView.m in Sources */ = {isa = PBXBuildFile; fileRef = B20A6ABE17375B530066BE64 /* LGEmblemView.m */; };
 		B20A6AC217375B8F0066BE64 /* emblem.png in Resources */ = {isa = PBXBuildFile; fileRef = B20A6AC017375B8F0066BE64 /* emblem.png */; };
 		B20A6AC317375B8F0066BE64 /* emblem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B20A6AC117375B8F0066BE64 /* emblem@2x.png */; };
+		B20A6AC61737638C0066BE64 /* LGTitleReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B20A6AC51737638C0066BE64 /* LGTitleReusableView.m */; };
+		B20A6AC9173765910066BE64 /* concrete_wall.png in Resources */ = {isa = PBXBuildFile; fileRef = B20A6AC7173765910066BE64 /* concrete_wall.png */; };
+		B20A6ACA173765910066BE64 /* concrete_wall@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = B20A6AC8173765910066BE64 /* concrete_wall@2X.png */; };
 		B23B2ADB17362B76008D193D /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B23B2AD917362B76008D193D /* Logo.png */; };
 		B23B2ADC17362B76008D193D /* Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B23B2ADA17362B76008D193D /* Logo@2x.png */; };
 		B23B2ADE17362D59008D193D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B23B2ADD17362D59008D193D /* QuartzCore.framework */; };
@@ -62,6 +65,10 @@
 		B20A6ABE17375B530066BE64 /* LGEmblemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGEmblemView.m; sourceTree = "<group>"; };
 		B20A6AC017375B8F0066BE64 /* emblem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emblem.png; sourceTree = "<group>"; };
 		B20A6AC117375B8F0066BE64 /* emblem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emblem@2x.png"; sourceTree = "<group>"; };
+		B20A6AC41737638C0066BE64 /* LGTitleReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGTitleReusableView.h; sourceTree = "<group>"; };
+		B20A6AC51737638C0066BE64 /* LGTitleReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGTitleReusableView.m; sourceTree = "<group>"; };
+		B20A6AC7173765910066BE64 /* concrete_wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = concrete_wall.png; sourceTree = "<group>"; };
+		B20A6AC8173765910066BE64 /* concrete_wall@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "concrete_wall@2X.png"; sourceTree = "<group>"; };
 		B23B2AD917362B76008D193D /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		B23B2ADA17362B76008D193D /* Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@2x.png"; sourceTree = "<group>"; };
 		B23B2ADD17362D59008D193D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -166,6 +173,8 @@
 		B258406A1735BF3300B07078 /* Waffles */ = {
 			isa = PBXGroup;
 			children = (
+				B20A6AC41737638C0066BE64 /* LGTitleReusableView.h */,
+				B20A6AC51737638C0066BE64 /* LGTitleReusableView.m */,
 				B20A6ABD17375B530066BE64 /* LGEmblemView.h */,
 				B20A6ABE17375B530066BE64 /* LGEmblemView.m */,
 				B20A6AB8173757E00066BE64 /* LGResultsViewController.h */,
@@ -198,6 +207,8 @@
 				B258406D1735BF3300B07078 /* InfoPlist.strings */,
 				B25840701735BF3300B07078 /* main.m */,
 				B25840721735BF3300B07078 /* Waffles-Prefix.pch */,
+				B20A6AC7173765910066BE64 /* concrete_wall.png */,
+				B20A6AC8173765910066BE64 /* concrete_wall@2X.png */,
 				B20A6AC017375B8F0066BE64 /* emblem.png */,
 				B20A6AC117375B8F0066BE64 /* emblem@2x.png */,
 				B25840761735BF3300B07078 /* Default.png */,
@@ -311,6 +322,8 @@
 				B20A6ABC173757E00066BE64 /* LGResultsViewController.xib in Resources */,
 				B20A6AC217375B8F0066BE64 /* emblem.png in Resources */,
 				B20A6AC317375B8F0066BE64 /* emblem@2x.png in Resources */,
+				B20A6AC9173765910066BE64 /* concrete_wall.png in Resources */,
+				B20A6ACA173765910066BE64 /* concrete_wall@2X.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +367,7 @@
 				B20A6AB4173756D80066BE64 /* LGResultsCollectionLayout.m in Sources */,
 				B20A6ABB173757E00066BE64 /* LGResultsViewController.m in Sources */,
 				B20A6ABF17375B530066BE64 /* LGEmblemView.m in Sources */,
+				B20A6AC61737638C0066BE64 /* LGTitleReusableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

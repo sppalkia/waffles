@@ -8,10 +8,12 @@
 
 #import "LGResultsViewController.h"
 #import "LGResultsCollectionLayout.h"
+#import "LGTitleReusableView.h"
 #import "LGResultCell.h"
 #import "LGLegoSet.h"
 
 static NSString * const ResultCellIdentifier = @"PhotoCell";
+static NSString * const TitleIdentifier = @"AlbumTitle";
 
 @interface LGResultsViewController ()
 
@@ -37,14 +39,17 @@ static NSString * const ResultCellIdentifier = @"PhotoCell";
     
     self.imageCache = [[NSMutableDictionary alloc] initWithCapacity:self.searchResults.count];
     
-    /*
     UIImage *patternImage = [UIImage imageNamed:@"concrete_wall"];
     self.collectionView.backgroundColor = [UIColor colorWithPatternImage:patternImage];
-    */
     
     [self.collectionView registerClass:[LGResultCell class]
             forCellWithReuseIdentifier:ResultCellIdentifier];
-        
+    
+    [self.collectionView registerClass:[LGTitleReusableView class]
+            forSupplementaryViewOfKind:LGResultsCollectionLayoutAlbumTitleKind
+                   withReuseIdentifier:TitleIdentifier];
+
+    
     self.thumbnailQueue = [[NSOperationQueue alloc] init];
     self.thumbnailQueue.maxConcurrentOperationCount = 3;
 }
@@ -125,6 +130,21 @@ static NSString * const ResultCellIdentifier = @"PhotoCell";
     
     return resultCell;
 }
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView
+           viewForSupplementaryElementOfKind:(NSString *)kind
+                                 atIndexPath:(NSIndexPath *)indexPath;
+{
+    LGTitleReusableView *titleView =
+    [collectionView dequeueReusableSupplementaryViewOfKind:kind
+                                       withReuseIdentifier:TitleIdentifier
+                                              forIndexPath:indexPath];
+    
+    LGLegoSet *legoSet = [self.searchResults objectAtIndex:indexPath.section];
+    titleView.titleLabel.text = legoSet.name;
+    return titleView;
+}
+
 
 
 

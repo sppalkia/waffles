@@ -10,8 +10,6 @@
 #import "LGResultsCollectionLayout.h"
 #import "LGEmblemView.h"
 
-static NSUInteger const RotationCount = 32;
-static NSUInteger const RotationStride = 3;
 static NSUInteger const PhotoCellBaseZIndex = 100;
 
 static NSString * const LGResultsCollectionLayoutPhotoCellKind = @"PhotoCell";
@@ -21,12 +19,10 @@ static NSString * const BHPhotoEmblemKind = @"Emblem";
 @interface LGResultsCollectionLayout ()
 
 @property (nonatomic, strong) NSDictionary *layoutInfo;
-@property (nonatomic, strong) NSArray *rotations;
 
 - (CGRect)frameForAlbumPhotoAtIndexPath:(NSIndexPath *)indexPath;
 - (CGRect)frameForAlbumTitleAtIndexPath:(NSIndexPath *)indexPath;
 - (CGRect)frameForEmblem;
-- (CATransform3D)transformForAlbumPhotoAtIndex:(NSIndexPath *)indexPath;
 
 @end
 
@@ -105,30 +101,10 @@ static NSString * const BHPhotoEmblemKind = @"Emblem";
 - (void)setup
 {
     self.itemInsets = UIEdgeInsetsMake(22.0f, 22.0f, 13.0f, 22.0f);
-    self.itemSize = CGSizeMake(300.0f, 300.0f);
+    self.itemSize = CGSizeMake(344.0f, 344.0f);
     self.interItemSpacingY = 12.0f;
     self.numberOfColumns = 2;
     self.titleHeight = 26.0f;
-    
-    // create rotations at load so that they are consistent during prepareLayout
-    NSMutableArray *rotations = [NSMutableArray arrayWithCapacity:RotationCount];
-    
-    CGFloat percentage = 0.0f;
-    for (NSInteger i = 0; i < RotationCount; i++) {
-        // ensure that each angle is different enough to be seen
-        CGFloat newPercentage = 0.0f;
-        do {
-            newPercentage = ((CGFloat)(arc4random() % 220) - 110) * 0.0001f;
-        } while (fabsf(percentage - newPercentage) < 0.006);
-        percentage = newPercentage;
-        
-        CGFloat angle = 2 * M_PI * (1.0f + percentage);
-        CATransform3D transform = CATransform3DMakeRotation(angle, 0.0f, 0.0f, 1.0f);
-        
-        [rotations addObject:[NSValue valueWithCATransform3D:transform]];
-    }
-    
-    self.rotations = rotations;
     
     [self registerClass:[LGEmblemView class] forDecorationViewOfKind:BHPhotoEmblemKind];
 }
@@ -160,7 +136,6 @@ static NSString * const BHPhotoEmblemKind = @"Emblem";
             UICollectionViewLayoutAttributes *itemAttributes =
                 [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
             itemAttributes.frame = [self frameForAlbumPhotoAtIndexPath:indexPath];
-            itemAttributes.transform3D = [self transformForAlbumPhotoAtIndex:indexPath];
             itemAttributes.zIndex = PhotoCellBaseZIndex + itemCount - item;
             
             cellLayoutInfo[indexPath] = itemAttributes;
@@ -266,12 +241,6 @@ static NSString * const BHPhotoEmblemKind = @"Emblem";
     CGFloat originY = -size.height - 30.0f;
     
     return CGRectMake(originX, originY, size.width, size.height);
-}
-
-- (CATransform3D)transformForAlbumPhotoAtIndex:(NSIndexPath *)indexPath
-{
-    NSInteger offset = (indexPath.section * RotationStride + indexPath.item);
-    return [self.rotations[offset % RotationCount] CATransform3DValue];
 }
 
 @end
