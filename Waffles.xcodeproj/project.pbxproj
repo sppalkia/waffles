@@ -32,7 +32,6 @@
 		B25840791735BF3300B07078 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B25840781735BF3300B07078 /* Default@2x.png */; };
 		B258407B1735BF3300B07078 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B258407A1735BF3300B07078 /* Default-568h@2x.png */; };
 		B258407E1735BF3300B07078 /* LGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B258407D1735BF3300B07078 /* LGViewController.m */; };
-		B25840811735BF3300B07078 /* LGViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B258407F1735BF3300B07078 /* LGViewController_iPhone.xib */; };
 		B25840841735BF3300B07078 /* LGViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B25840821735BF3300B07078 /* LGViewController_iPad.xib */; };
 		B258408C1735BF3300B07078 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B258408B1735BF3300B07078 /* SenTestingKit.framework */; };
 		B258408D1735BF3300B07078 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25840641735BF3300B07078 /* UIKit.framework */; };
@@ -89,7 +88,6 @@
 		B258407A1735BF3300B07078 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B258407C1735BF3300B07078 /* LGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGViewController.h; sourceTree = "<group>"; };
 		B258407D1735BF3300B07078 /* LGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGViewController.m; sourceTree = "<group>"; };
-		B25840801735BF3300B07078 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LGViewController_iPhone.xib; sourceTree = "<group>"; };
 		B25840831735BF3300B07078 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LGViewController_iPad.xib; sourceTree = "<group>"; };
 		B258408A1735BF3300B07078 /* WafflesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WafflesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B258408B1735BF3300B07078 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -201,7 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				B20A6ABA173757E00066BE64 /* LGResultsViewController.xib */,
-				B258407F1735BF3300B07078 /* LGViewController_iPhone.xib */,
 				B25840821735BF3300B07078 /* LGViewController_iPad.xib */,
 				B258406C1735BF3300B07078 /* Waffles-Info.plist */,
 				B258406D1735BF3300B07078 /* InfoPlist.strings */,
@@ -313,7 +310,6 @@
 				B25840771735BF3300B07078 /* Default.png in Resources */,
 				B25840791735BF3300B07078 /* Default@2x.png in Resources */,
 				B258407B1735BF3300B07078 /* Default-568h@2x.png in Resources */,
-				B25840811735BF3300B07078 /* LGViewController_iPhone.xib in Resources */,
 				B25840841735BF3300B07078 /* LGViewController_iPad.xib in Resources */,
 				B23B2ADB17362B76008D193D /* Logo.png in Resources */,
 				B23B2ADC17362B76008D193D /* Logo@2x.png in Resources */,
@@ -396,14 +392,6 @@
 				B258406E1735BF3300B07078 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		B258407F1735BF3300B07078 /* LGViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B25840801735BF3300B07078 /* en */,
-			);
-			name = LGViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
 		B25840821735BF3300B07078 /* LGViewController_iPad.xib */ = {
@@ -490,6 +478,7 @@
 				GCC_PREFIX_HEADER = "Waffles/Waffles-Prefix.pch";
 				INFOPLIST_FILE = "Waffles/Waffles-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -501,6 +490,7 @@
 				GCC_PREFIX_HEADER = "Waffles/Waffles-Prefix.pch";
 				INFOPLIST_FILE = "Waffles/Waffles-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

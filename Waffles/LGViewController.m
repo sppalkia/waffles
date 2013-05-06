@@ -19,10 +19,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    UIImage *patternImage = [UIImage imageNamed:@"concrete_wall"];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:patternImage];
     
-    [self getQueryResults:@"X-wing"];
+    self.searchFieldContainerView.layer.cornerRadius = 4.0f;
 }
+
+-(void)viewDidAppear:(BOOL)animated {    
+    [self.searchField performSelector:@selector(becomeFirstResponder) withObject:nil afterDelay:0.2];
+    [super viewDidAppear:animated];
+
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [self.searchField resignFirstResponder];
+    [super viewWillDisappear:animated];
+}
+
+-(void)viewDidDisappear:(BOOL)animated {
+    [self.searchField setText:@""];
+    [super viewDidDisappear:animated];
+}
+
+#pragma mark - Query Handling
 
 -(void)getQueryResults:(NSString *)query {
     
@@ -48,18 +67,34 @@
 }
 
 -(void)processQueryResults:(NSArray *)results {
-    for (LGLegoSet *set in results) {
-        NSLog(@"%@", [set description]);
-    }
     
-    LGResultsViewController *controller = [[LGResultsViewController alloc] initWithNibName:@"LGResultsViewController" bundle:nil results:results];
-    [self presentViewController:controller animated:YES completion:nil];
+    if (results.count  > 0) {
+        LGResultsViewController *controller = [[LGResultsViewController alloc] initWithNibName:@"LGResultsViewController" bundle:nil results:results];
+        [self presentViewController:controller animated:YES completion:nil];
+    }
+    else {
+        [[[UIAlertView alloc] initWithTitle:@"No Results"
+                                    message:@"There were no results for this search. Try something else!"
+                                   delegate:nil
+                          cancelButtonTitle:@"Okay"
+                                               otherButtonTitles:nil] show];
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if ([textField.text length] > 1) {
+        [self getQueryResults:textField.text];
+        return YES;
+    }
+    return NO;
 }
 
 @end

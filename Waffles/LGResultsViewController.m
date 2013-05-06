@@ -145,6 +145,17 @@ static NSString * const TitleIdentifier = @"AlbumTitle";
     return titleView;
 }
 
+#pragma mark - UIScrollViewDelegate
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat scrollPoint = scrollView.contentOffset.y;
+    if (scrollPoint < -250.0f) {
+        [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
+            [self.imageCache removeAllObjects];
+            [self.searchResults removeAllObjects];
+        }];
+    }
+}
 
 
 
