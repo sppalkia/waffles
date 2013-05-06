@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LGResultsViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate>
+@interface LGResultsViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate> {
+    BOOL _dismissing;
+}
 
 - (id)initWithNibName:(NSString *)n bundle:(NSBundle *)b results:(NSArray *)results;
 

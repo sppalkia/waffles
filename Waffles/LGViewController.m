@@ -19,13 +19,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+        
     UIImage *patternImage = [UIImage imageNamed:@"concrete_wall"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:patternImage];
     
     self.searchFieldContainerView.layer.cornerRadius = 4.0f;
+    
+    self.logoView.autoresizingMask = (UIViewAutoresizingNone);
+    self.logoView.contentMode = UIViewContentModeScaleAspectFill;
+    self.logoView.clipsToBounds = YES;
+
 }
 
--(void)viewDidAppear:(BOOL)animated {    
+-(void)viewWillAppear:(BOOL)animated {
+    [self willRotateToInterfaceOrientation:self.interfaceOrientation duration:0];
+    [super viewWillAppear:animated];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
     [self.searchField performSelector:@selector(becomeFirstResponder) withObject:nil afterDelay:0.2];
     [super viewDidAppear:animated];
 
@@ -39,6 +50,47 @@
 -(void)viewDidDisappear:(BOOL)animated {
     [self.searchField setText:@""];
     [super viewDidDisappear:animated];
+}
+
+#pragma mark - Auto Rotation
+
+-(BOOL)shouldAutorotate {
+    return YES;
+}
+
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    
+    const CGFloat landscapeImageSize = 200.0f;
+    const CGFloat portraitImageSize = 400.0f;
+    
+    if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
+        self.logoView.frame = CGRectMake(312, 30, landscapeImageSize, landscapeImageSize);
+        self.logoView.center = CGPointMake(self.view.center.y, landscapeImageSize - 60);
+        
+        self.searchFieldContainerView.frame = CGRectMake(30,
+                                                         280,
+                                                         964,
+                                                         82);
+        self.searchField.frame = CGRectMake(self.searchField.frame.origin.x,
+                                            self.searchField.frame.origin.y,
+                                            954,
+                                            self.searchField.frame.size.height);
+    }
+    else {
+        self.logoView.frame = CGRectMake(184, 101, portraitImageSize, portraitImageSize);
+        
+        self.searchFieldContainerView.frame = CGRectMake(44,
+                                                         592,
+                                                         680,
+                                                         82);
+        self.searchField.frame = CGRectMake(self.searchField.frame.origin.x,
+                                            self.searchField.frame.origin.y,
+                                            670,
+                                            self.searchField.frame.size.height);
+
+
+    }
+
 }
 
 #pragma mark - Query Handling

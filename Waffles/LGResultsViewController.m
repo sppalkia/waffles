@@ -37,7 +37,11 @@ static NSString * const TitleIdentifier = @"AlbumTitle";
 {
     [super viewDidLoad];
     
+    _dismissing = NO;
+    
     self.imageCache = [[NSMutableDictionary alloc] initWithCapacity:self.searchResults.count];
+    
+    [self willRotateToInterfaceOrientation:self.interfaceOrientation duration:0];
     
     UIImage *patternImage = [UIImage imageNamed:@"concrete_wall"];
     self.collectionView.backgroundColor = [UIColor colorWithPatternImage:patternImage];
@@ -67,17 +71,14 @@ static NSString * const TitleIdentifier = @"AlbumTitle";
                                 duration:(NSTimeInterval)duration
 {
     if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
-        self.layout.numberOfColumns = 3;
-        
-        // handle insets for iPhone 4 or 5
-        CGFloat sideInset = [UIScreen mainScreen].preferredMode.size.width == 1136.0f ? 45.0f : 25.0f;
-        
-        self.layout.itemInsets = UIEdgeInsetsMake(22.0f, sideInset, 13.0f, sideInset);
-        
+        [self.layout setNumberOfColumns: 3];
+        [self.layout setItemSize:CGSizeMake(300.0f, 300.0f)];
+        [self.layout setItemInsets:UIEdgeInsetsMake(22.0f, 22.0f, 13.0f, 22.0f)];
     }
     else {
-        self.layout.numberOfColumns = 2;
-        self.layout.itemInsets = UIEdgeInsetsMake(22.0f, 22.0f, 13.0f, 22.0f);
+        [self.layout setNumberOfColumns: 2];
+        [self.layout setItemSize:CGSizeMake(344.0f, 344.0f)];
+        [self.layout setItemInsets:UIEdgeInsetsMake(22.0f, 22.0f, 13.0f, 22.0f)];
     }
 }
 
@@ -148,11 +149,17 @@ static NSString * const TitleIdentifier = @"AlbumTitle";
 #pragma mark - UIScrollViewDelegate
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if (_dismissing) return;
+    
     CGFloat scrollPoint = scrollView.contentOffset.y;
-    if (scrollPoint < -250.0f) {
-        [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
+    UIInterfaceOrientation orientation = self.interfaceOrientation;
+    
+    if ((UIInterfaceOrientationIsLandscape(orientation) && scrollPoint < -150.0f) || (UIInterfaceOrientationIsPortrait(orientation) && scrollPoint < -250.0f)) {
+            [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
             [self.imageCache removeAllObjects];
             [self.searchResults removeAllObjects];
+            _dismissing = YES;
         }];
     }
 }

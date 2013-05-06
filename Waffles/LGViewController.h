@@ -15,5 +15,6 @@
 
 @property(nonatomic, strong) IBOutlet UIView *searchFieldContainerView;
 @property(nonatomic, strong) IBOutlet UITextField *searchField;
+@property(nonatomic, strong) IBOutlet UIImageView *logoView;
 
 @end
