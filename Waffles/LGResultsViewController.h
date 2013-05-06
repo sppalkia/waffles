@@ -2,11 +2,14 @@
 //  LGResultsViewController.h
 //  Waffles
 //
-//  Created by Shoumik Palkar on 5/4/13.
+//  Created by Shoumik Palkar on 5/5/13.
 //  Copyright (c) 2013 Shoumik Palkar. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface LGResultsViewController : UICollectionViewController
+@interface LGResultsViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+
+- (id)initWithNibName:(NSString *)n bundle:(NSBundle *)b results:(NSArray *)results;
+
 @end
