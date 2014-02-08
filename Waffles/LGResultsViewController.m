@@ -7,6 +7,7 @@
 //
 
 #import "LGResultsViewController.h"
+#import "LGInstructionViewController.h"
 #import "LGResultsCollectionLayout.h"
 #import "LGTitleReusableView.h"
 #import "LGResultCell.h"
@@ -144,6 +145,14 @@ static NSString * const TitleIdentifier = @"AlbumTitle";
     LGLegoSet *legoSet = [self.searchResults objectAtIndex:indexPath.section];
     titleView.titleLabel.text = legoSet.name;
     return titleView;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    LGLegoSet *set = [self.searchResults objectAtIndex:[indexPath section]];
+    
+    LGInstructionViewController *controller = [[LGInstructionViewController alloc] initWithNibName:@"LGInstructionViewController" bundle:nil legoSet:set];
+    [self presentViewController:controller animated:NO completion:nil];
+    [collectionView deselectItemAtIndexPath:indexPath animated:NO];
 }
 
 #pragma mark - UIScrollViewDelegate

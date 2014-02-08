@@ -40,6 +40,9 @@
 		B25840991735BF3300B07078 /* WafflesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B25840981735BF3300B07078 /* WafflesTests.m */; };
 		B25840A41735DC4B00B07078 /* LGLegoSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B25840A31735DC4B00B07078 /* LGLegoSet.m */; };
 		B25840A71735DD2E00B07078 /* LGXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B25840A61735DD2E00B07078 /* LGXMLParser.m */; };
+		B2AB58D71738B5A7002FA98C /* LGInstructionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AB58D51738B5A7002FA98C /* LGInstructionViewController.m */; };
+		B2AB58D81738B5A7002FA98C /* LGInstructionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2AB58D61738B5A7002FA98C /* LGInstructionViewController.xib */; };
+		B2AB58DB1738BD96002FA98C /* LGLegoInstructions.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AB58DA1738BD96002FA98C /* LGLegoInstructions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +102,11 @@
 		B25840A31735DC4B00B07078 /* LGLegoSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGLegoSet.m; sourceTree = "<group>"; };
 		B25840A51735DD2E00B07078 /* LGXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGXMLParser.h; sourceTree = "<group>"; };
 		B25840A61735DD2E00B07078 /* LGXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGXMLParser.m; sourceTree = "<group>"; };
+		B2AB58D41738B5A7002FA98C /* LGInstructionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGInstructionViewController.h; sourceTree = "<group>"; };
+		B2AB58D51738B5A7002FA98C /* LGInstructionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGInstructionViewController.m; sourceTree = "<group>"; };
+		B2AB58D61738B5A7002FA98C /* LGInstructionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LGInstructionViewController.xib; sourceTree = "<group>"; };
+		B2AB58D91738BD96002FA98C /* LGLegoInstructions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGLegoInstructions.h; sourceTree = "<group>"; };
+		B2AB58DA1738BD96002FA98C /* LGLegoInstructions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGLegoInstructions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,8 +193,12 @@
 				B25840741735BF3300B07078 /* LGAppDelegate.m */,
 				B258407C1735BF3300B07078 /* LGViewController.h */,
 				B258407D1735BF3300B07078 /* LGViewController.m */,
+				B2AB58D41738B5A7002FA98C /* LGInstructionViewController.h */,
+				B2AB58D51738B5A7002FA98C /* LGInstructionViewController.m */,
 				B25840A21735DC4B00B07078 /* LGLegoSet.h */,
 				B25840A31735DC4B00B07078 /* LGLegoSet.m */,
+				B2AB58D91738BD96002FA98C /* LGLegoInstructions.h */,
+				B2AB58DA1738BD96002FA98C /* LGLegoInstructions.m */,
 				B25840A51735DD2E00B07078 /* LGXMLParser.h */,
 				B25840A61735DD2E00B07078 /* LGXMLParser.m */,
 				B258406B1735BF3300B07078 /* Supporting Files */,
@@ -198,6 +210,7 @@
 		B258406B1735BF3300B07078 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B2AB58D61738B5A7002FA98C /* LGInstructionViewController.xib */,
 				B20A6ABA173757E00066BE64 /* LGResultsViewController.xib */,
 				B25840821735BF3300B07078 /* LGViewController_iPad.xib */,
 				B258406C1735BF3300B07078 /* Waffles-Info.plist */,
@@ -320,6 +333,7 @@
 				B20A6AC317375B8F0066BE64 /* emblem@2x.png in Resources */,
 				B20A6AC9173765910066BE64 /* concrete_wall.png in Resources */,
 				B20A6ACA173765910066BE64 /* concrete_wall@2X.png in Resources */,
+				B2AB58D81738B5A7002FA98C /* LGInstructionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +378,8 @@
 				B20A6ABB173757E00066BE64 /* LGResultsViewController.m in Sources */,
 				B20A6ABF17375B530066BE64 /* LGEmblemView.m in Sources */,
 				B20A6AC61737638C0066BE64 /* LGTitleReusableView.m in Sources */,
+				B2AB58D71738B5A7002FA98C /* LGInstructionViewController.m in Sources */,
+				B2AB58DB1738BD96002FA98C /* LGLegoInstructions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

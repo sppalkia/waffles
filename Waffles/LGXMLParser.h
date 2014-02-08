@@ -8,15 +8,28 @@
 
 #import <Foundation/Foundation.h>
 
-@class LGLegoSet;
+enum LGXMLType {
+    LGXMLTypeSet = 0,
+    LGXMLTypeInstruction = 1,
+};
+
+@class LGLegoSet, LGLegoInstructions;
 @interface LGXMLParser : NSObject <NSXMLParserDelegate> {
+    
+    enum LGXMLType _type;
+    
     NSMutableArray *_output;
     NSXMLParser *_parser;
     NSData *_data;
     BOOL _storingCharacters;
     
+    //Lego Set Parsing
     NSMutableString *_currentString;
     LGLegoSet *_currentSet;
+    
+    //Instruction Parsing
+    LGLegoInstructions *_currentInstructions;
+    
 }
 
 @property(strong, readonly, nonatomic) NSData *parseData;
